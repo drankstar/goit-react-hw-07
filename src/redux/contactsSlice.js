@@ -60,7 +60,7 @@ export const { selectContacts } = contactsSlice.selectors
 
 export default contactsSlice.reducer
 
-export const filteredContacts = createSelector(
+export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],
   (contacts, filterValue) => {
     return contacts.filter((el) =>
